@@ -1,0 +1,46 @@
+@import url("../src/components/basical_elements/Input/input.sass")
+@import url("../src/components/TopField/top-field.sass")
+@import url("../src/components/Filters/filters.sass")
+@import url("../src/components/WorkTools/tools.sass")
+@import url("../src/components/Aside/aside.sass")
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  transition: .2s
+
+input, textarea
+  &:active,
+  &:focus
+  &:focus-visible
+    outline: none
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder
+  opacity: 1
+  transition: 0.2s ease
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder
+  opacity: 0
+  transition: 0.2s ease
+
+.general-wrapper
+  padding: 20px
+
+.hidden
+  opacity: 0
+  visibility: hidden
+
+.visible
+  opacity: 1
+  visibility: visible
+
+.clear
+  width: 12px
+  height: 12px
+  cursor: pointer
+  background-image: url("./assets/images/close.svg")
+  &:hover
+    transform: rotate(90deg)

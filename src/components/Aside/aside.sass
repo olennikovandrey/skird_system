@@ -1,0 +1,23 @@
+aside
+  display: inline-block
+  width: 15%
+  & nav
+    position: relative
+    height: 25px
+    line-height: 25px
+    padding-left: 25px
+    cursor: pointer
+    &:hover
+      color: #0457c2
+    &::before
+      position: absolute
+      content: ""
+      width: 20px
+      height: 15px
+      top: 50%
+      left: 0px
+      transform: translate(0, -50%)
+      background: url("../../assets/images/folder.svg") no-repeat center
+      transition: .2s
+    &:hover::before
+      background: url("../../assets/images/opened_folder.svg") no-repeat center
