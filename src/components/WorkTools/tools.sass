@@ -26,11 +26,19 @@
       & img
         height: 25px
 
-  & h4
+  & .table-header
     height: 100%
-    width: 100%
+    width: 90%
+    display: flex
     line-height: 40px
-    padding-left: 20px
     border-radius: 5px
     background: linear-gradient(#3a3a3afa 0%, #6e6e6e 50%, #3a3a3afa 100%)
     color: #fff
+    & span
+      text-align: center
+      border-right: 2px solid #fff
+      &:nth-child(1)
+        width: 15%
+      &:last-child
+        width: 85%
+        border: none

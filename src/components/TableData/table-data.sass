@@ -1,0 +1,74 @@
+.table
+  width: 90%
+  display: flex
+  flex-direction: column
+  &__item
+    width: 100%
+    display: flex
+    border-bottom: 2px solid #3a3a3afa
+    cursor: pointer
+    &:hover
+      background-color: #f3f3f3
+    &-title
+      border: none
+      outline: none
+      line-height: 25px
+      padding-left: 10px
+      text-align: left
+      border-right: 2px solid #3a3a3afa
+      &:nth-child(1)
+        width: 15%
+    &-description
+      width: 85%
+      padding: 5px 10px
+      transition: none
+      border: none
+      &:disabled
+        background-color: #fff
+.table-modal-wrapper
+  position: fixed
+  top: 40%
+  left: 50%
+  transform: translate(-50%, -50%)
+  width: 30%
+  height: auto
+  background-color: #fff
+  border: 1px solid #000
+
+.table-modal
+  padding: 30px 10px 10px
+  width: 100%
+  height: auto
+
+  & label
+    width: 100%
+    display: flex
+    justify-content: space-between
+  & input
+    width: 85%
+    margin-bottom: 10px
+    border: none
+    border-bottom: 1px solid #000
+  & textarea
+    margin-bottom: 10px
+    max-width: 85%
+    width: auto
+    min-width: 85%
+    min-height: 100px
+    max-height: 300px
+
+  &__buttons-wrapper
+    display: flex
+    justify-content: flex-end
+    & button
+      margin-right: 5px
+      padding: 5px
+      background-color: #0457c2
+      color: #fff
+      border: none
+      border-radius: 4px
+      cursor: pointer
+      &:hover
+        background-color: #3088fc
+      &:last-child
+        margin-right: 0

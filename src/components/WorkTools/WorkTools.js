@@ -1,15 +1,9 @@
-import calculatorIcon from "../../assets/images/work_tools/calculator.ico";
-import filterIcon from "../../assets/images/work_tools/filter.png";
-import leverIcon from "../../assets/images/work_tools/lever.svg";
-import plusIcon from "../../assets/images/work_tools/plus.svg";
-import refreshIcon from "../../assets/images/work_tools/refresh.svg";
-import starIcon from "../../assets/images/work_tools/star.png";
+import { icons } from "./index";
 import React from "react";
 import { useSelector } from "react-redux";
 
 const WorkTools = () => {
-  const icons = [plusIcon, calculatorIcon, leverIcon, refreshIcon, filterIcon, starIcon];
-  const filter = useSelector(state => state.filter);
+  const activeMenuItem = useSelector(state => state.activeMenuItem);
 
   return (
     <div className="tools">
@@ -22,7 +16,14 @@ const WorkTools = () => {
           )
         }
       </div>
-      <h4>{ filter }</h4>
+      <div className="table-header">
+        { activeMenuItem &&
+          <>
+            <span>Название</span>
+            <span>Описание</span>
+          </>
+        }
+      </div>
     </div>
   );
 };
